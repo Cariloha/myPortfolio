@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <script src="https://kit.fontawesome.com/8df0ca793f.js" crossorigin="anonymous"></script>
+    <title>Portfolio Berty</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a>HEURISTIC</a>
+            
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="heuristic-view">
+
+    <div class="img-slider">
+        <section class="slide active">
+            <img src="/img/heuristic/home.png">
+            <span class="info">
+                <h1>Navbar + header </h1>
+            </span>
+        </section>
+        
+        <section class="slide">
+            <img src="/img/heuristic/video.PNG">
+            <span class="info">
+            <h1> Video section </h1>
+            </span>
+        </section>  
+
+        <section class="slide">
+            <img src="/img/heuristic/instalaciones.png">
+            <span class="info">
+            <h1> Facilities </h1>
+        </span>
+        </section> 
+        
+        <section class="slide">
+            <img src="/img/heuristic/membresias.png">
+            <span class="info">
+            <h1> Memberships </h1>
+            </span>
+
+        </section>  
+
+        <section class="slide">
+            <img src="/img/heuristic/espacios.png">
+            <span class="info">
+            <h1> Workspace for rent </h1>
+            </span>
+        </section>  
+
+        <section class="slide">
+            <img src="/img/heuristic/servicios.png">
+            <span class="info">
+            <h1> Services </h1>
+            </span>
+        </section>  
+
+        <section class="slide">
+            <img src="/img/heuristic/footer.png">
+            <span class="info">
+            <h1> Footer </h1>
+            </span>
+        </section> 
+        
+        <section class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </section>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+    
+        // Javascript for image slider manual navigation
+        var manualNav = function(manual){
+          slides.forEach((slide) => {
+            slide.classList.remove('active');
+    
+            btns.forEach((btn) => {
+              btn.classList.remove('active');
+            });
+          });
+    
+          slides[manual].classList.add('active');
+          btns[manual].classList.add('active');
+        }
+    
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+          });
+        });   
+        </script>
+
+
+
+    <footer>
+        <a href="https://github.com/Cariloha" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/bertycpe/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </footer>
+</body>
+
+</html>
